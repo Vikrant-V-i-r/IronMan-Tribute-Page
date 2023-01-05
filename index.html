@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILY 3000</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <h1>""</h1>
+        <img class="ironman-img" src="res/div2res/Iron-Man-AOU-Render.webp" alt="Iron Man">
+        <p>Tony Stark is a billionaire industrialist and genius inventor who uses his high-tech suit of armor to fight
+            crime as Iron Man.</p>
+    </div>
+
+    <div class="hero content">
+        <img src="res/div2res/iron-man-6480952_1280.jpg" alt="Iron Man hero image" class="hero-img">
+        <div class="hero-text">
+            <h2 class="glitch" data-text="Iron Man">Iron Man</h2>
+            <p style="font-size: 1.5em;" class="glitch" data-text="Tony Stark is a billionaire industrialist and genius inventor who uses his high-tech suit of armor to
+            fight crime as Iron Man. He is a founding member of the Avengers and has saved the world countless
+            times.">Tony Stark is a billionaire industrialist and genius inventor who uses his high-tech suit of armor
+                to
+                fight crime as Iron Man. He is a founding member of the Avengers and has saved the world countless
+                times.</p>
+        </div>
+    </div>
+
+    <div class="carousel content">
+        <div class="card">
+            <img src="res/img/im1.jpg" alt="Iron Man">
+            <h3>Iron Man</h3>
+            <p>2008</p>
+        </div>
+        <div class="card">
+            <img src="res/img/im2.jpg" alt="Iron Man 2">
+            <h3>Iron Man 2</h3>
+            <p>2010</p>
+        </div>
+        <div class="card">
+            <img src="res/img/im3.jpg" alt="Iron Man 3">
+            <h3>Iron Man 3</h3>
+            <p>2013</p>
+        </div>
+        <div class="card">
+            <img src="res/img/theavengers_lob_crd_01.jpg" alt="The Avengers">
+            <h3>The Avengers</h3>
+            <p>2012</p>
+        </div>
+        <div class="card">
+            <img src="res/img/Avengers_-_Age_of_Ultron.webp" alt="Avengers: Age of Ultron">
+            <h3>Avengers: Age of Ultron</h3>
+            <p>2015</p>
+        </div>
+        <div class="card">
+            <img src="res/img/civilwar.jpg" alt="Captain America: Civil War">
+            <h3>Captain America: Civil War</h3>
+            <p>2016</p>
+        </div>
+        <div class="card">
+            <img src="res/img/infinitywar.jpg" alt="Avengers: Infinity War">
+            <h3>Avengers: Infinity War</h3>
+            <p>2018</p>
+        </div>
+        <div class="card">
+            <img src="res/img/endgame.jpg" alt="Avengers: Endgame">
+            <h3>Avengers: Endgame</h3>
+            <p>2019</p>
+        </div>
+    </div>
+
+
+
+    <!-- Add some JavaScript to create a smooth scrolling effect when the user scrolls down the page -->
+    <script>
+
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+            document.body.style.backgroundPosition = '0 ' + value * 0.7 + 'px';
+        });
+
+
+
+        var cards = document.querySelectorAll('.card');
+        cards.forEach(function (card) {
+            card.addEventListener('click', function () {
+                var carousel = card.parentElement;
+                var currentScrollPosition = carousel.scrollLeft;
+                var cardOffset = card.offsetLeft;
+                carousel.scrollTo({
+                    left: currentScrollPosition + cardOffset - 20,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
